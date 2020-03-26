@@ -6,7 +6,9 @@ import time, replit
 #clear()
 
 #print(os.name)
+replit.clear()
 
+# wait 1 sec
 time.sleep(1)
 
 # ask the user
@@ -47,4 +49,5 @@ replit.clear()
 
 # print it to the console
 print("Du blir hundre år i " + str(yearWhenHundred) + ".")
+
 
