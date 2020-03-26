@@ -1,2 +1,6 @@
-#readme_local.txt
+#readme_local.txt - commented out
+# all files with .txt extention
 *.txt
+
+# this folder
+/dir2
