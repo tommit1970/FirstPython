@@ -4,3 +4,6 @@
 
 # this folder
 /dir2
+
+# info on *.css - why is it not uploading
+# .git/info/exclude contains info on *.css
