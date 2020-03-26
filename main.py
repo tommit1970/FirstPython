@@ -1,7 +1,11 @@
-import time, os, replit
+import time, os
+
+if (os.name == "posix"):
+    import replit
 
 # to clear the screen I made a function
 clear = lambda: os.system("cls")
+newPower = lambda: os.system("start powershell -verb runas")
 
 def cls():
     if windows:
@@ -63,6 +67,7 @@ print("Takk for at du tok deg tid til å finne dette ut og nå stenger jeg snart
 
 if(os.name == "nt"):
     print("You're on a windows machine")
+    newPower()
 elif(os.name == "posix"):
     print("You're on a mac machine")
 else:
