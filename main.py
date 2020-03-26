@@ -2,6 +2,9 @@ import time, os
 
 if (os.name == "posix"):
     import replit
+    windows = False
+elif(os.name == "nt"):
+    windows = True
 
 # to clear the screen I made a function
 clear = lambda: os.system("cls")
@@ -12,8 +15,6 @@ def cls():
         clear()
     else:
         replit.clear()
-
-windows = False
 
 #print(os.name)
 if(os.name == "nt"):
