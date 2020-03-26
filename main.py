@@ -1,15 +1,24 @@
-import time, replit
+import time, os, replit
 
 # to clear the screen I made a function
-#import os
-#clear = lambda: os.system("cls")
-#clear()
+clear = lambda: os.system("cls")
+
+def cls():
+    if windows:
+        clear()
+    else:
+        replit.clear()
+
+windows = False
 
 #print(os.name)
-replit.clear()
+if(os.name == "nt"):
+    windows = True
 
 # wait 1 sec
 time.sleep(1)
+
+cls()
 
 # ask the user
 print("Hva er ditt navn?")
@@ -18,7 +27,7 @@ name = input()
 
 # clear screen again
 #clear()
-replit.clear()
+cls()
 
 # print a welcome message
 print("Hello " +name + "!")
@@ -27,7 +36,7 @@ print("Hello " +name + "!")
 print("Hvor gammel er du?")
 age = int(input())
 
-replit.clear()
+cls()
 
 print("Har du hatt bursdag iår? (j/n)")
 answer = input() # 49
@@ -45,12 +54,17 @@ diffToHundred = 100 - age # 100 - 50 = 50
 yearWhenHundred = yearNow + diffToHundred # 2020 + 50
 
 
-replit.clear()
+cls()
 
 # print it to the console
 print("Du blir hundre år i " + str(yearWhenHundred) + ".")
 
 print("Takk for at du tok deg tid til å finne dette ut og nå stenger jeg snart dette vinduet.")
 
-
+if(os.name == "nt"):
+    print("You're on a windows machine")
+elif(os.name == "posix"):
+    print("You're on a mac machine")
+else:
+    print("I don't know what system you're on. Sorry!")
 
