@@ -50,4 +50,7 @@ replit.clear()
 # print it to the console
 print("Du blir hundre år i " + str(yearWhenHundred) + ".")
 
+print("Takk for at du tok deg tid til å finne dette ut og nå stenger jeg snart dette vinduet.")
+
+
 
